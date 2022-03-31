@@ -1,8 +1,6 @@
 import java.util.ResourceBundle.Control;
 import java.util.Scanner;
 
-
-
 public class Bingo{
     public static void printBoard(int[][] arr) {                        //prints out the board
         String temp = "";
@@ -106,9 +104,13 @@ public class Bingo{
             System.out.println("Next Command? \n");
             Scanner input = new Scanner(System.in);
             String command = input.nextLine();
-
-            if(command == "WIN"){
+            if(command.equals("hello")){
+                System.out.println("sup bruv");
+            }else if(command.equals("end")){
+                System.out.println("Ending game");
                 gameState = false;
+            }else{
+                System.out.println(command);
             }
         }System.out.println("Finished! Congrats!");
         // int[][] arr = new int[5][5];
@@ -123,8 +125,8 @@ public class Bingo{
         // arr[3][1] = 9;
         // arr[4][1] = 10;
 
-        int[][] arr = makeBoard();
-        printBoard(arr);
+        // int[][] arr = makeBoard();
+        // printBoard(arr);
     }
 
 
